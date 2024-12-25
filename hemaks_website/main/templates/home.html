@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Carousel Bölümü -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <!-- Carousel Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/slide1.jpg' %}" class="d-block w-100" alt="İlk slayt">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Hoş Geldiniz</h5>
+                    <p>İPLİK PUNTALAMA TEKNOLOJİSİNDE ÖNCÜ FİRMAYIZ.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/slide2.jpg' %}" class="d-block w-100" alt="İkinci slayt">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>50 YILLIK MAKİNE FİRMASI</h5>
+                    <p>25.000 METREKARE KAPALI ALANDA MAKİNE ÜRETİMİ YAPIYORUZ.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/slide3.jpg' %}" class="d-block w-100" alt="Üçüncü slayt">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>İPLİK KONUSUNDA DEVASA BİR BİLGİ BİRİKİMİ</h5>
+                    <p>Sektörünüze özel çözümlerle işinizi büyütün.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Kontrolleri -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Önceki</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sonraki</span>
+        </button>
+    </div>
+
+    <!-- Hakkımızda Bölümü -->
+    <div class="container text-center my-5">
+        <h2>Hakkımızda</h2>
+        <p>1978 yılında Gaziantep’te faaliyete başlayan firmamız Gaziantep Organize Sanayide</p>
+        <p>50 yıldır tekstil sektöründe büyük çapta üretim yapmaktadır.</p>
+        <p>İplik Katlama, Puntalama , Büküm, Aktarma , Boyahane Sarım, Yumuşak Sarım Makineleri Üretiminde 1 numara</p>
+        <p>Türkiye'de tekstilin olduğu her yerde referansımız vardır</p>
+        <p>Dünya genelinde makinelerimiz şu anda 50 den fazla ülkede üretim yapıyor</p>
+        <a href="{% url 'about' %}" class="btn btn-outline-primary mt-3">HADİ BAŞLAYALIM</a>
+    </div>
+
+    <!-- Hero Bölümü -->
+    <div class="hero-section">
+        <div class="hero-content text-center text-white">
+            <h1 class="display-4">Hoş Geldiniz!</h1>
+            <p class="lead">Yüksek kalite iplik makineleriyle hizmetinizdeyiz.</p>
+            <a href="{% url 'products' %}" class="btn btn-primary btn-lg">Ürünlerimizi Keşfedin</a>
+        </div>
+    </div>
+
+    <!-- 3 Bölüm Alt Kısım -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/girisalt2.jpg' %}" class="card-img-top" alt="Bölüm 1">
+                    <div class="card-body">
+                        <h5 class="card-title">İPLİK PUNTALAMA INTERMINGLE</h5>
+                        <p class="card-text">Polyester, Pamuk, Polipropilen <b>iplikleri çok hassasiyetle puntalar ve katlar.</b>
+                            <br>
+                            Tüm kontroller ekrandan ayarlanır, tansiyon eğim açısı, hız aklınıza gelecek her şey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/girisalt2.jpg' %}" class="card-img-top" alt="Bölüm 2">
+                    <div class="card-body">
+                        <h5 class="card-title">LİKRALI KATLAMA MAKİNASI</h5>
+                        <p class="card-text">Kumaş Üretiminde En Temel Makinanız.
+                            <br> <b>Pamuk ve viskon gibi ipliklerinize LİKRA vermek için en mükemmel yöntem.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/girisalt2.jpg' %}" class="card-img-top" alt="Bölüm 2">
+                    <div class="card-body">
+                        <h5 class="card-title">İĞLİ BÜKÜM MAKİNASI</h5>
+                        <p class="card-text">Kumaş Üretiminde En Temel Makinanız.
+                            <br> <b>Pamuk ve viskon gibi ipliklerinize LİKRA vermek için en mükemmel yöntem.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/girisalt2.jpg' %}" class="card-img-top" alt="Bölüm 2">
+                    <div class="card-body">
+                        <h5 class="card-title">İPLİK ŞARDON MAKİNESİ</h5>
+                        <p class="card-text">Kumaş Üretiminde En Temel Makinanız.
+                            <br> <b>Pamuk ve viskon gibi ipliklerinize LİKRA vermek için en mükemmel yöntem.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/girisalt2.jpg' %}" class="card-img-top" alt="Bölüm 2">
+                    <div class="card-body">
+                        <h5 class="card-title">LİKRALI KATLAMA MAKİNASI</h5>
+                        <p class="card-text">Kumaş Üretiminde En Temel Makinanız.
+                            <br> <b>Pamuk ve viskon gibi ipliklerinize LİKRA vermek için en mükemmel yöntem.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/girisalt3.jpg' %}" class="card-img-top" alt="Bölüm 3">
+                    <div class="card-body">
+                        <h5 class="card-title">CAĞLIKLI KATLAMA</h5>
+                        <p class="card-text">10, 20 Kat Cağlıklar sayesinde istediğiniz katta iplik yapın.
+                            <br>Her katın ayrı sensörü ve ayarı ile kat eksikliği gibi hataları sıfıra indirin.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Kartlara bazı özelleştirmeler */
+    .card {
+        border: none; /* Kart kenarlığını kaldır */
+        border-radius: 10px; /* Yuvarlak köşeler */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Hafif gölge */
+        transition: transform 0.3s ease-in-out; /* Hover efektine geçiş ekleyelim */
+    }
+
+    .card:hover {
+        transform: translateY(-10px); /* Kart hover ile yukarı kayar */
+    }
+
+    .card-img-top {
+        height: 200px; /* Resim boyutunu ayarlayın */
+        object-fit: cover; /* Resmi kesmeden uygun şekilde doldurur */
+    }
+
+    /* İçerik yazısı ve başlık ayarları */
+    .card-title {
+        font-size: 1.2rem; /* Başlık boyutu */
+        font-weight: bold; /* Başlık kalın */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Yazı boyutu */
+        color: #555; /* Yazı rengini koyu gri yapalım */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background-image: url("{% static 'images/girisalt1.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        min-height: 500px;
+    }
+
+    /* Header kısmı için telefon numarası ve simge */
+    .header-contact {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .header-contact .phone-icon {
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}

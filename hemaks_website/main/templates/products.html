@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <h1 class="text-center">Ürünlerimiz</h1>
+    <div class="row">
+        {% for machine in machines %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    {% if machine.image %}
+                        <img src="{{ machine.image.url }}" class="card-img-top" alt="{{ machine.name }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ machine.name }}</h5>
+                        <p class="card-text">{{ machine.description }}</p>
+                        <p><strong>Teknik Özellikler:</strong> {{ machine.technical_specs }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
